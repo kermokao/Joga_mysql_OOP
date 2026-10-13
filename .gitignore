@@ -1,0 +1,19 @@
+Node.js sõltuvused
+
+node_modules/
+
+WebStormi seadistused
+
+.idea/
+
+Keskkonnamuutujad ja saladused
+
+.env .env.*
+
+Logifailid
+
+logs/ .log npm-debug.log
+
+Operatsioonisüsteemi ajutised failid
+
+.DS_Store Thumbs.db
