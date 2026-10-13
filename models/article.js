@@ -1,9 +1,19 @@
-const express = require('express');
-const router = express.Router();
-const articleControllerClass = require('../controllers/article');
+const BaseSQLModel = require('./base');
 
-const articleController = new articleControllerClass()
+class ArticleModel extends BaseSQLModel {
+    constructor() {
+        super('article');
+    }
 
-router.get('/', (req, res) => articleController.getAllArticles(req, res));
+    async findAll(){
+        const articles = await super.findAll()
+        return articles
+    }
 
-module.exports = router;
+    async findOne(slug){
+        const article = await super.findOne('slug', slug)
+        return article
+    }
+}
+
+module.exports = ArticleModel;
