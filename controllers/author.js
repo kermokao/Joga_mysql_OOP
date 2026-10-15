@@ -1,3 +1,5 @@
+// kommentaar //
+
 const authorDbModel = require('../models/author')
 const articleDbModel = require('../models/article')
 
